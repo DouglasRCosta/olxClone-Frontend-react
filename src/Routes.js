@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import {Home} from './pages/Home/Home'
 import Teste from './pages/Teste/Teste'
 import React from "react";
+import { NotFound } from './pages/NotFound/NotFound';
 
 
 export const MainRoutes = () => {
@@ -9,6 +10,8 @@ export const MainRoutes = () => {
         <Routes>
             <Route  path="/" element={<Home />} />
             <Route  path='/teste' element={<Teste />} />
+            <Route  path='*' element={<NotFound />} />
+
         </Routes>
     )
 }
