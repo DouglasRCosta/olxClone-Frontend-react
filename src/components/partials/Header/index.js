@@ -2,11 +2,12 @@ import { Link } from 'react-router-dom'
 import './header.css'
 
 import { isLogged } from '../../../helpers/authHandle'
+import { PageContainer } from '../../MainComponents';
 const Header = () => {
     let logged = isLogged();
     return (
         <header>
-            <div className='container'>
+            <PageContainer>
                 <div className='header-container'>
                     <div className='logo'>
                         <Link to="/">
@@ -39,15 +40,11 @@ const Header = () => {
                                         <Link to='/singup'>Cadastrar</Link>
                                     </li>
                                 </>
-
-
                             }
-
-
                         </ul>
                     </nav>
                 </div>
-            </div>
+            </PageContainer>
         </header>
     )
 }

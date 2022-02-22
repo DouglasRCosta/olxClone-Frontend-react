@@ -1,10 +1,14 @@
+import { PageContainer } from "../../MainComponents"
+
 const Footer = () => {
     return (
-        <div>
-            <div>
-                <h1>Footer</h1>
-            </div>
-        </div>
+        <footer>
+            <PageContainer>
+                <div>
+                    <h1>Footer</h1>
+                </div>
+            </PageContainer>
+        </footer>
     )
 }
 export default Footer

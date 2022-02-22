@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from 'react-redux';
 import { MainRoutes } from './Routes';
 import Header from "./components/partials/Header";
 import Footer from "./components/partials/Footer";
-import { Template } from './components/Template'
+import { Template } from './components/MainComponents'
 import './App.css'
 
+
 function Page(props) {
+
   return (
 
     <>
+
       <Template>
         <Header />
         <MainRoutes />
