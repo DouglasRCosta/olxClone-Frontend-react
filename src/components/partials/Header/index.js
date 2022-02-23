@@ -3,8 +3,14 @@ import './header.css'
 
 import { isLogged } from '../../../helpers/authHandle'
 import { PageContainer } from '../../MainComponents';
+import Cookies from 'js-cookie';
 const Header = () => {
     let logged = isLogged();
+
+    let handlerLogout = ()=>{
+        Cookies.remove('token');
+        window.location.href = '/'
+    }
     return (
         <header>
             <PageContainer>
@@ -24,7 +30,7 @@ const Header = () => {
                                         <Link to='/myaccount'>Minha Conta</Link>
                                     </li>
                                     <li>
-                                        <Link to='/logout'>Sair</Link>
+                                        <button onClick={handlerLogout}>Sair</button>
                                     </li>
                                     <li>
                                         <Link to='/postad' className='postar-button'>Postar anúncio</Link>

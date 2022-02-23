@@ -52,12 +52,16 @@ nav li {
     margin-left: 20px;
     margin-right: 20px;
 }
-nav li a {
+nav li a,
+button {
+    cursor: pointer;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
     color: #000;
     font-size: 15px;
     transition: 200ms ease-in-out;
 }
-nav li a:hover {
+nav li a:hover , button:hover {
     color: rgb(129, 129, 129);
 }
 .postar-button {

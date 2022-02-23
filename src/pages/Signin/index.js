@@ -12,22 +12,27 @@ const Page = () => {
     let [disabled, setDisabled] = useState(false);
     let [error, setError] = useState('');
 
+  
     const handleSubmit = async (e) => {
+        setError('');
         e.preventDefault();
         setDisabled(true);
 
         const json = await api.login(email, password);
 
+      
         if (json.error) {
             setError(json.error);
-            setTimeout(()=>setDisabled(false),900);
+
         } else {
-            doLogin(json.token, remember);
-            window.location.href = '/';
+            if (json.token !== undefined) {
+                doLogin(json.token, remember);
+                window.location.href = '/';
+            }
         }
 
 
-
+        setTimeout(() => setDisabled(false), 900);
 
     }
     return (
