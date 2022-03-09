@@ -1,0 +1,11 @@
+.bread{
+    margin-top: 5px;
+}
+.bread a{
+    margin: 0 2px;
+    color: #1800f1;;
+}
+.bread a:hover{
+   
+    color: #0c007a;;
+}

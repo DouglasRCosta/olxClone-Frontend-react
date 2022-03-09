@@ -3,6 +3,7 @@ import './singin.css'
 
 import useApi from '../../helpers/OlxApi'
 import { doLogin } from '../../helpers/authHandle'
+import { PageContainer } from '../../components/MainComponents';
 const Page = () => {
     let api = useApi()
 
@@ -12,7 +13,7 @@ const Page = () => {
     let [disabled, setDisabled] = useState(false);
     let [error, setError] = useState('');
 
-  
+
     const handleSubmit = async (e) => {
         setError('');
         e.preventDefault();
@@ -20,8 +21,20 @@ const Page = () => {
 
         const json = await api.login(email, password);
 
-      
+        console.log(json)
+
         if (json.error) {
+            try {
+                if (json.error.email.msg) {
+                    setError(json.error.email.msg);
+                    setTimeout(() => setDisabled(false), 900);
+                    return
+                }
+
+            } catch (error) {
+
+            }
+
             setError(json.error);
 
         } else {
@@ -36,11 +49,10 @@ const Page = () => {
 
     }
     return (
-        <div className="container">
-            <div className="singin-container">
+        <PageContainer>
+            <div className="signin-container">
 
                 <h1 className='login-title'>Login</h1>
-
                 {error && <h2 className='error'>{error}</h2>}
 
                 <form onSubmit={handleSubmit}>
@@ -70,7 +82,8 @@ const Page = () => {
                     </label>
                 </form>
             </div>
-        </div>
+        </PageContainer>
+
     );
 }
 

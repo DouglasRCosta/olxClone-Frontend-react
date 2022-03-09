@@ -1,0 +1,20 @@
+
+.fake-load {
+    background: linear-gradient(90deg, #aaa, #eee, #aaa);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 3s ease infinite;
+    animation: AnimationName 3s ease infinite;
+}
+
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 53%}
+    50%{background-position:100% 48%}
+    100%{background-position:0% 53%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 53%}
+    50%{background-position:100% 48%}
+    100%{background-position:0% 53%}
+}

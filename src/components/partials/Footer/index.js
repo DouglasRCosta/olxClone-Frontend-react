@@ -1,5 +1,5 @@
 import { PageContainer } from "../../MainComponents"
-
+import './footer.css'
 const Footer = () => {
     return (
         <footer>

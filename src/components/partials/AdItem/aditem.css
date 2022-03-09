@@ -1,0 +1,32 @@
+
+.ad-Item{
+    width: 25%;
+}
+.ad-Item a{
+    display: block;
+    
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px;
+    text-decoration: none;
+    transition: 200ms ease;
+    background-color: #FFF;
+}
+.ad-Item a:hover{
+    transform: scale(1.04);
+    background-color: #DDD;
+    border:1px solid #BBB;
+}
+.ad-Item img{
+    width: 100%;
+}
+.item-Image img{
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #AAA;
+}
+.item-Name , .item-Price{
+    font-weight: bold;
+    color: #000;
+    margin-top: 5px;
+}

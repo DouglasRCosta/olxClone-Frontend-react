@@ -1,10 +1,9 @@
 import { useState } from 'react';
-
 import './signup.css'
 import useApi from '../../helpers/OlxApi'
-
 import { useEffect } from 'react';
 import { doLogin } from '../../helpers/authHandle';
+import { PageContainer } from '../../components/MainComponents';
 
 
 const Page = () => {
@@ -16,7 +15,6 @@ const Page = () => {
     let [password, setPassword] = useState('');
     let [confirmPassword, setConfirmPassword] = useState('');
     let [state, setState] = useState('');
-
     let [disabled, setDisabled] = useState(false);
     let [error, setError] = useState('');
     let [statesFetch, setStatesFetch] = useState([]);
@@ -25,7 +23,7 @@ const Page = () => {
     useEffect(() => {
         let getStates = async () => {
             let listStates = await api.getStates()
-            setStatesFetch(listStates.states);
+            setStatesFetch(listStates);
         }
         getStates();
     }, [])
@@ -43,24 +41,18 @@ const Page = () => {
 
         const json = await api.register(name, email, password, state);
 
-
         if (json.error) {
             setError(JSON.stringify(json.error));
-
         } else {
             if (json.token !== undefined) {
                 doLogin(json.token);
                 window.location.href = '/';
             }
         }
-
-
         setTimeout(() => setDisabled(false), 900);
-
     }
-
     return (
-        <div className="container">
+        <PageContainer>
             <div className="singin-container">
 
                 <h1 className='cadastro-title'>Cadastro</h1>
@@ -112,7 +104,8 @@ const Page = () => {
                     </label>
                 </form>
             </div>
-        </div>
+        </PageContainer>
+
     )
 }
 export default Page
