@@ -49,5 +49,41 @@
 
 .adlist-right-side{
     flex: 1;
-    border: 2px solid #b7df29;
+
+}
+
+.adlist-right-side .ads{
+    display: flex;
+    flex-wrap: wrap;
+}
+.adlist-right-side .ads .ad-Item{
+    width: 33%;
+}
+.no-result{
+    margin: auto;
+    margin-top: 25px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page-number{
+    margin: 10px 3px;
+    border: 2px solid black;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.page-number:hover , .page-number-active{
+    background-color: black;
+    color: white;
+    font-size: 18px;
 }

@@ -1,5 +1,6 @@
 
 .ad-Item{
+    min-width: 200px;
     width: 25%;
 }
 .ad-Item a{

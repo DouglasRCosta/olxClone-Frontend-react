@@ -2,3 +2,7 @@
     max-width: 1000px;
     margin: auto;
 }
+.template{
+    min-height: 100vh;
+    position: relative;
+}

@@ -39,9 +39,9 @@ const Page = () => {
                         Você está em:
                         <Link to='/'>Home</Link>
                         /
-                        <Link to={`/ads?state=${adInfo.stateName.name}`}>{adInfo.stateName.name}</Link>
+                        <Link to={`/adlist?state=${adInfo.stateName.name}`}>{adInfo.stateName.name}</Link>
                         /
-                        <Link to={`/ads?state=${adInfo.stateName.name}&cat=${adInfo.category.slug}`}>{adInfo.category.name}</Link>
+                        <Link to={`/adlist?state=${adInfo.stateName.name}&cat=${adInfo.category.slug}`}>{adInfo.category.name}</Link>
                         / {adInfo.title}
                     </BreadChumb>
                 }
