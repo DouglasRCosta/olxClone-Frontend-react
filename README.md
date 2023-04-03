@@ -6,4 +6,6 @@ npm i
 
 npm run start
 
-necessario >> https://github.com/DouglasRCosta/olx-backend-api
+necessário >> https://github.com/DouglasRCosta/olx-backend-api
+
+se for a primeira vez talvez seja necessário recarregar algumas páginas para os dados serem inseridos no database
